@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        // function myfunction(value,index,array){
+        //  return value>18;
+        // }
+        const numbers=[12,34,2,23];
+        // let result= numbers.find(myfunction);
+        // let nlen=numbers.length;
+        // for(let i=0;i<nlen;i++){
+        //  document.write(result);
+           
+        // }
+        document.getElementById("demo").innerHTML=numbers;
+
+        let result=numbers.sort(function(a,b){return a-b;});
+        document.getElementById("demo2").innerHTML="Sorted Array: "+result;
+    </script>
+</body>
+</html>

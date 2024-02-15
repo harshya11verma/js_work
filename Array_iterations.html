@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Iterations</title>
+</head>
+<body>
+    <p>This is for each iteration</p>
+    <p id="demo" ></p>
+    <p id="demo2" ></p>
+    <p id="demo3" ></p>
+    <p id="demo4" ></p>
+    <script>
+        const arr=[2,3,4,41,51,6];
+        let text="";
+        arr.forEach(myFunctiion);
+        document.getElementById("demo").innerHTML=text;
+        function myFunctiion(value,index,array){
+            text+= value + "<br>";
+        }
+        let arr2=arr.map(my2function);
+        document.getElementById("demo2").innerHTML=arr2;
+        function my2function(value,index,array){
+            return value*2+"<br>";
+        }
+        let arr3=arr.flatMap((x)=>x*3);
+        document.getElementById("demo2").innerHTML=arr3;
+
+        let arr4=arr.filter(my3function);
+        document.getElementById("demo3").innerHTML=arr4;
+        function my3function(total,value){
+          return value>18;
+
+        
+       
+        }
+    </script>
+</body>
+</html>

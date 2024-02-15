@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        function person(name,age,eyecolor){
+            this.name=name;
+            this.age=age;
+            this.eyecolor=eyecolor;
+        }
+        person.prototype.favfood="Pasta";
+        const Sam=new person("Sam","14","blue");
+        const Sonya=new person("Sonya","41","brown","Brownie");
+        document.getElementById("demo").innerHTML=Sam.name+ " is a "+Sam.age+
+        " year old boy,who have "+ Sam.eyecolor +" eyes and his mother name is "+Sonya.name+
+        "who is "+Sonya.age+" years old who have "+Sonya.eyecolor+" eyes."+
+        "<br><br>Her favorite food is "+Sonya.favfood;
+    </script>
+</body>
+</html>

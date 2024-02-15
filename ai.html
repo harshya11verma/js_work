@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo4"></p>
+    <script>
+        const arr=[2,3,4,41,51,6];
+        let arr5=arr.reduce(my4function);
+        document.getElementById("demo4").innerHTML=arr5;
+        function my4function(total,value,index,array){
+            return total+value;
+        }
+    </script>
+</body>
+</html>

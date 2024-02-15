@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JavaScript</title>
+</head>
+<body>
+
+<button id="myButton">Click Me</button>
+<p id="demo"></p>
+<!-- <button onclick="document.getElementById('demo').innerHTML=Date()">Todays Date and time</button> -->
+<button onclick="DisplayDate()">Todays Date and time</button>
+<button onclick="this.innerHTML=Date()">Time is?</button>
+
+<script type="module" src="import.js">
+    function DisplayDate(){
+        return document.getElementById("demo").innerHTML=Date();
+    }
+    // Get a reference to the button element
+    let button = document.getElementById("myButton");
+
+    // Add an event listener to the button for the click event
+    button.addEventListener("click", function(event) {
+        // This function will be executed when the button is clicked
+        document.write("Button clicked!");
+        console.log("Event details:", event);
+    });
+</script>
+
+</body>
+</html>

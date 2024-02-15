@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        class Cars{
+          constructor(name,color){
+             this.name=name;
+             this.color=color;
+          }
+        }
+        const car1=new Cars("Audi","Red");
+        const car2=new Cars("BMW","Black");
+        document.getElementById("demo1").innerHTML=car1.name +" "+car1.color;
+        document.getElementById("demo2").innerHTML=car2.name +" "+car2.color;
+
+    </script>
+</body>
+</html>

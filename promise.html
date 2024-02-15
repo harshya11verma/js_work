@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        function myDisplayer(some){
+           document.getElementById("demo").innerHTML=some;
+        }
+        function myDisplayer2(some){
+           document.getElementById("demo2").innerHTML=some;
+        }
+        let MyPromise= new Promise(function(Resolve,Reject){
+            let x=1;
+            if(x==0){
+                Resolve("ok");
+            }
+            else{
+                Reject("error");
+            }
+        });
+        async function myFunction(){
+            return "Hi";
+        }
+        myFunction().then(
+            function(value){myDisplayer2(value)},
+            function(error){myDisplayer2(error)}
+        );
+        MyPromise.then(
+            function(value){myDisplayer(value)},
+            function(error){myDisplayer(error)}
+        );
+    </script>
+</body>
+</html>

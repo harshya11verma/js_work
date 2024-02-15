@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>await</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <script>
+        async function myDisplayer(){
+            let myPromise= new Promise(function(Resolve,Reject){
+                Resolve("Today is Monday");
+            });
+document.getElementById("demo").innerHTML= await myPromise;
+
+        }
+        setTimeout(myDisplayer,3000);
+    </script>
+</body>
+</html>

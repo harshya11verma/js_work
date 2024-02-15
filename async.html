@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo3"></p>
+    <p id="demo2"></p>
+    <script>
+        let hello="something";
+        document.getElementById("demo1").innerHTML=hello;
+        function myFunctiion(){
+            document.getElementById("demo2").innerHTML="<h2>Waiting....</h2>";
+        }
+        setTimeout(myFunctiion,3000);
+        setInterval(my2function,1000);
+        function my2function(){
+            let d = new Date();
+            document.getElementById("demo3").innerHTML=
+            "<h1>"+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+"</h1>";
+        }
+
+    </script>
+</body>
+</html>

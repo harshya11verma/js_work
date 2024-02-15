@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        const cars=["Audi","Mustang","Volvo","Scorpio"];
+        document.getElementById("demo").innerHTML=cars;
+        //looping arrays
+        let clen=cars.length;
+        let text="<ul>";
+            for(let i=0;i<clen;i++){
+                text+="<li>"+cars[i]+"</li>";
+            }
+            text+="</ul>";
+            document.getElementById("demo").innerHTML=text;
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p id="">This content will be chnaged</p>
+    <button onclick="change()">click</button>
+    <h2 id="demo2">Open new window</h2>
+    <button onclick="newPage()">ok</button>
+    <script>
+        function change(){
+            document.open();
+            document.write("<h2>This is fun!!</h2>");
+            document.close();
+        }
+        function newPage(){
+            var w= window.open();
+            w.document.write("<h2>Welcome to new page</h2>");
+            w.document.close();
+        }
+    </script>
+</body>
+</html>
